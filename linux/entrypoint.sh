@@ -29,7 +29,7 @@ if [[ "$PYPI_URL" != "https://pypi.python.org/" ]] || \
     cat /root/.pip/pip.conf
 fi
 
-cd $WORKDIR
+cd "$WORKDIR"
 
 if [ -f requirements.txt ]; then
     pip install -r requirements.txt
