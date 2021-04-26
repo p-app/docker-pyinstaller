@@ -21,6 +21,7 @@ fi
 cd "$( dirname "${BASH_SOURCE[0]}" )" || exit
 
 docker build \
+  --force-rm \
   -f "${OS_FAMILY}/${OS_ARCH}/Dockerfile" \
   -t "p2app/pyinstaller-${OS_FAMILY}:${OS_ARCH}" \
   "${OS_FAMILY}"
